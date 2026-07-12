@@ -1,5 +1,7 @@
 #include<iostream>
 #include"func_template.hpp"
+#include"class_template.hpp"
+
 
 void func_temp()
 {
@@ -14,4 +16,18 @@ void func_temp()
     std::cout << maxd << std::endl;
     std::cout << x << std::endl;
     std::cout << dd << std::endl;
+}
+
+void class_temp()
+{
+Box<int> intBox(42);
+Box<std::string> strBox("hello");
+
+int num = intBox.get();
+std::string str = strBox.get();
+
+std::cout << num << std::endl;
+std::cout << str << std::endl;
+
+
 }
