@@ -17,7 +17,6 @@ struct Health
 {
     int hp;
 };
-
 class Scene
 {
 public:
@@ -47,8 +46,6 @@ public:
     Entity nextId_ = 0;
     std::unordered_map<std::type_index,std::unordered_map<Entity,std::any>> pools_;
 };
-
-
 int main()
 {
     Scene scene;
@@ -59,7 +56,7 @@ int main()
 
     scene.addComponent(player,Velocity{1,0});
 
-    scene.addComponent(player,Health{100});
+    scene.addComponent(player,Health{200});
 
     Entity rock = scene.createEntity();
 
