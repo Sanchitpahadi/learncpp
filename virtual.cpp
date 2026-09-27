@@ -6,34 +6,33 @@ class Shape
 
     public:
 
-    virtual void Draw()
-    {
-        std::cout << "drawing shapes";
-    }
+    virtual void Draw() = 0;
 };
 
 class Circle : public Shape 
 {
 
-    void Draw( ) override
+    void Draw( ) 
     {
-        std::cout << "drawing Circle";
+        std::cout << "drawing Circle\n";
     }
 };
 
 class Square : public Shape 
 {
 
-    void Draw( ) override
+    void Draw( ) 
     {
-        std::cout << "drawing Circle";
+        std::cout << "drawing Square\n";
     }
 };
 int main()
 {
 
     Shape * s = new Square;
-    s->Draw();    
+    Shape * c = new Circle;
+    s->Draw();  
+    c->Draw();      
 
     return 0;
 }
